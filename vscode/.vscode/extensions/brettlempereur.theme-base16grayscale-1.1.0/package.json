@@ -1,0 +1,43 @@
+{
+	"name": "theme-base16grayscale",
+	"displayName": "Base16 Grayscale",
+	"description": "Light and dark variants of the Base16 Grayscale theme by Chris Kempson",
+	"version": "1.1.0",
+	"publisher": "brettlempereur",
+	"icon": "images/icon.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/brett-lempereur/theme-base16grayscale.git"
+	},
+	"engines": {
+		"vscode": "^1.12.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Base16 Grayscale Dark",
+				"uiTheme": "vs-dark",
+				"path": "./themes/Base16 Grayscale Dark-color-theme.json"
+			},
+			{
+				"label": "Base16 Grayscale Light",
+				"uiTheme": "vs",
+				"path": "./themes/Base16 Grayscale Light-color-theme.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "625efa3d-6aa8-4d46-83dd-b2ed2237700a",
+		"publisherId": "08720c91-e23a-4ca7-b6f4-79bfb8c8e359",
+		"publisherDisplayName": "Brett Lempereur",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1668586820366,
+		"preRelease": false
+	}
+}

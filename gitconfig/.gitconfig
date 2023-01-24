@@ -1,0 +1,7 @@
+[user]
+	name = Carlos Tafur
+	email = ctafur@gmail.com
+[code]
+	editor = code
+[init]
+	defaultBranch = main

@@ -1,0 +1,103 @@
+
+
+
+[[language]]
+name = 'markdown'
+scope = 'source.markdown'
+roots = []
+file-types = ['md', 'mkd', 'markdown']
+indent = { tab-width = 2, unit = '  ' }
+rulers = [81]
+language-server = { command = 'marksman' }
+# TODO No funciona
+formatter = { command = 'prettier', args = ['--parser=markdown', '--write'] }
+config = { format = { 'arrowParens' = 'avoid', 'singleQuote' = false, 'tabWidth' = 2, 'useTabs' = false, 'trailingComma' = 'all', 'proseWrap' = 'always', 'endOfLine' = 'lf', 'printWidth' = 80, 'embeddedLanguageFormatting' = 'auto', 'semi' = false, 'parser' = 'markdown' } }
+[language.auto-pairs]
+
+
+
+[[language]]
+name = 'c'
+indent = { tab-width = 2, unit = '  '}
+language-server = { command = 'clangd' }
+
+
+[[language]]
+name = "javascript"
+indent = { tab-width = 2, unit = "  "}
+language-server = { command = "typescript-language-server" }
+
+
+
+[[language]]
+name = 'python'
+# scope = 'source.python'
+# roots = []
+indent = { tab-width = 4, unit = '    ' }
+# language-server = { command = 'pylsp' }
+language-server = { command = 'pyright' }
+# TODO No funciona
+formatter = { command = "black", args = ["--stdio"] }
+
+
+
+[[language]]
+name = 'toml'
+indent = { tab-width = 4, unit = '    ' }
+
+
+
+[[language]]
+name = 'yaml'
+indent = { tab-width = 2, unit = '  ' }
+language-server = { command = 'yaml-language-server' }
+
+
+
+[[language]]
+name = 'sql'
+indent = { tab-width = 2, unit = '  ' }
+language-server = { command = 'sqls' }
+
+
+
+[[language]]
+name = 'lua'
+indent = { tab-width = 4, unit = '    ' }
+# TODO No funciona
+formatter = { command = 'stylua' }
+# config = { format = { 'column_width' = 120, 'line_endingsm = 'Unix', 'indent_type' = 'Spaces', 'indent_width' = 4, 'quote_style' = 'AutoPreferDouble', 'call_parentheses' = 'Always', 'collapse_simple_statement' = 'Never' } }
+
+
+
+[[language]]
+name = 'latex'
+# scope = 'source.tex'
+# roots = []
+file-types = ['tex', 'ltex', 'latex']
+language-server = { command = 'texlab' }
+# formatter = { command = 'texlab' }
+
+
+
+[[language]]
+name = 'make'
+
+
+
+# [[language]]
+# name = 'restructuredtext'
+# file-types = ['rst']
+# grammar = 'tree-sitter-rst'
+# scope = 'source.rst'
+# language-server = { command = 'tree-sitter-rst' }
+# roots = []
+
+
+
+[[grammar]]
+name = 'restructuredtext' 
+source = { git = 'https://github.com/stsewd/tree-sitter-rst.git', rev = '25e6328872ac3a764ba8b926aea12719741103f1' }
+
+
+

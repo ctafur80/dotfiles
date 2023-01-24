@@ -1,0 +1,125 @@
+
+
+
+
+
+
+# import:
+# uncomment the flavour you want below:
+# - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
+#  - ~/.config/alacritty/catppuccin/catppuccin-macchiato.yml
+#  - ~/.config/alacritty/catppuccin/catppuccin-frappe.yml
+#  - ~/.config/alacritty/catppuccin/catppuccin-latte.yml
+
+
+window:
+  dimensions:
+    columns: 115
+    lines: 46
+
+  padding:
+    x: 0
+    y: 0
+
+  decorations: full
+
+scrolling:
+  history: 10000
+
+  multiplier: 3
+
+font:
+  normal:
+    family: JetBrainsMonoNL Nerd Font
+    style: Regular
+
+  italic:
+    family: JetBrainsMonoNL Nerd Font
+    style: Italic
+
+  bold:
+    family: JetBrainsMonoNL Nerd Font
+    style: Bold
+
+  bold_italic:
+    family: JetBrainsMonoNL Nerd Font
+    style: Bold Italic
+
+
+  size: 14.0
+
+  offset:
+    x: 0
+    y: 0
+
+  glyph_offset:
+    x: 0
+    y: 0
+
+debug.render_timer: false
+
+draw_bold_text_with_bright_colors: false
+
+
+bell:
+  animation: EaseOutExpo
+  duration: 0
+
+window.opacity: 1.0
+
+mouse_bindings:
+  - { mouse: Middle, action: PasteSelection }
+
+mouse:
+  double_click: { threshold: 300 }
+  triple_click: { threshold: 300 }
+
+  hide_when_typing: false
+
+  hints:
+    launcher: open
+
+selection:
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>"
+
+  save_to_clipboard: true
+
+cursor:
+  style: Block
+  # color: red
+
+  unfocused_hollow: true
+
+live_config_reload: true
+
+shell:
+  program: /bin/zsh
+  args:
+    - --login
+
+
+alt_send_esc: false
+
+key_bindings:
+  # macOS Spain-Spanish keyboard settings with ISO (not ANSI) layout
+  #
+  # Ajustes para teclado macOS español de España con disposición ISO (no ANSI;
+  # tecla Intro grande).
+  - { key: 10,        mods: Alt,    chars: "\\" } # barra invertida `\`
+  - { key: 18,        mods: Alt,    chars: "|" } # barra vertical `|`
+  - { key: 19,        mods: Alt,    chars: "@" } # arroba `@`
+  - { key: 20,        mods: Alt,    chars: "#" } # almohadilla/cardinalidad `#`
+  - { key: 22,        mods: Alt,    chars: "¬" } # negación en lógica `¬`
+  - { key: 39,        mods: Alt,    chars: "{" } # abre llaves `{`
+  - { key: 42,        mods: Alt,    chars: "}" } # cierra llaves `}`
+  - { key: 33,        mods: Alt,    chars: "[" } # abre corchetes `[`
+  - { key: 30,        mods: Alt,    chars: "]" } # cierra corchetes `]`
+
+
+
+
+
+
+
+
+
