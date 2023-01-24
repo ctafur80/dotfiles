@@ -59,8 +59,8 @@ vim.bo.formatoptions = vim.bo.formatoptions:gsub("o", "")
 -- Backup and undo
 vim.opt.backup = false
 vim.opt.undofile = true
-vim.opt.undodir = os.getenv("HOME") .. "/.config/other/nvim-undodir"
--- vim.opt.undodir = vim.g.stdpath.config .. "/.config/other/nvim-undodir"
+vim.opt.undodir = os.getenv("HOME") .. "/.config/cache/neovim"
+-- vim.opt.undodir = vim.g.stdpath.config .. "/.config/cache/neovim"
 vim.opt.undolevels = 1000
 vim.opt.undoreload = 10000
 
