@@ -1,8 +1,7 @@
 
 
 vim.opt.termguicolors = false
-pcall(vim.cmd, "colorscheme minicyan")
--- pcall(vim.cmd, "colorscheme rose-pine")
+pcall(vim.cmd, "colorscheme minicyan") -- rose-pine is also great
 
 vim.opt.number = false
 
@@ -11,7 +10,7 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
--- vim.opt.smartindent = false
+vim.opt.smartindent = false
 
 vim.opt.scrolloff = 4
 
@@ -25,22 +24,20 @@ vim.opt.hidden = true
 vim.opt.conceallevel = 0
 
 
--- Netrw. Vim's default integrated file explorer. Maybe Telescope will make it
--- obsolete.
+-- Netrw. Vim's default integrated file explorer. Maybe Telescope will make it obsolete.
 vim.g.netrw_banner = 1
 vim.g.netrw_liststyle = 3
 
 
 
--- TODO Quizás haya una forma de hacerlo podiendo el valor original en la
--- primera cadena
+-- TODO Quizás haya una forma de hacerlo podiendo el valor original en la primera cadena
 vim.opt.path = ".,/user/include,," .. "**"
 -- vim.opt.path = vim.opt.path .. "**"
 
 
--- Highlights sotf wrap so that I can unset numbering lines. Indents by 2
--- additional characters on wrapped lines; when line >= 40 characters puts
--- "showbreak" to the left in the same line
+-- Highlights sotf wrap so that I can unset numbering lines. Indents by 2 additional
+-- characters on wrapped lines; when line >= 40 characters puts the showbreak symbol at the
+-- left.
 vim.opt.breakindent = true
 vim.opt.breakindentopt = "shift:2,min:40,sbr"
 vim.opt.showbreak = "⤷"
@@ -66,7 +63,7 @@ vim.opt.undoreload = 10000
 
 
 
--- Searching (more info in https://stackoverflow.com/a/2288438/7026520)
+-- Searching (more info at https://stackoverflow.com/a/2288438/7026520)
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.incsearch = true

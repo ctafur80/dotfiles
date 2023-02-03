@@ -2,12 +2,8 @@
 
 -- Neovim settings
 
--- It is done in Lua language. You can learn to make your Neovim settings in Lua in
+-- It is done in Lua language. You can learn to make your Neovim settings in Lua at
 -- <https://www.notonlycode.org/neovim-lua-config/>.
-
-
-
-
 
 require("plugins")
 
