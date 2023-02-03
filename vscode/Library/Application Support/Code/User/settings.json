@@ -49,8 +49,6 @@
     "*.ipynb": "jupyter-notebook",
   },
 
-  // "remote.containers.dockerPath": "podman",
-
   // TODO Sería desesable tener unas task predeterminadas asociadas al tipo de
   // archivo. En este issue lo piden: https://github.com/microsoft/vscode/issues/88106
 
@@ -89,7 +87,6 @@
   "Lua.format.enable": true,
   "Lua.semantic.enable": true,
   "[lua]": {
-    // 
   },
 
 
@@ -110,7 +107,6 @@
 
   "[makefile]": {
     "editor.insertSpaces": false,
-    // "editor.tabSize": 2,
     "editor.indentSize": 2,
     "editor.rulers": [{
       "column": 92,
@@ -413,3 +409,4 @@
 
 
 }
+
