@@ -84,3 +84,26 @@ vim.api.nvim_create_autocmd('BufReadPost', {
 
 
 
+
+
+
+-- Loading some mini.nvim modules
+-- require("mini.basics").setup()
+require("mini.ai").setup()
+require("mini.comment").setup()
+require("mini.surround").setup()
+require("mini.trailspace").setup()
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -18,39 +18,28 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Loading packages
 require("lazy").setup({
+    {'echasnovski/mini.nvim', version = false},
 
-    "folke/which-key.nvim",
+    {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"},
+    "nvim-treesitter/playground",
+
+    -- "folke/which-key.nvim",
     {"folke/neoconf.nvim", cmd = "Neoconf"},
     "folke/neodev.nvim",
-
-    "tpope/vim-surround",
-
-
-    "echasnovski/mini.nvim",
-
 
     -- "huyvohcmc/atlas.vim",
     -- {'rose-pine/neovim', as = 'rose-pine'},
 
-
     "lewis6991/gitsigns.nvim",
-
 
     -- "lukas-reineke/indent-blankline.nvim",
 
-
-    "andrewferrier/wrapping.nvim",
     "vim-pandoc/vim-pandoc-syntax",
 
-    {
+    { -- TODO Replace it with the mini.nvim one.
         "numToStr/Comment.nvim",
-        config = function() require("Comment").setup() end
+        config = function () require("Comment").setup() end
     },
-
-
-
-    {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"},
-    "nvim-treesitter/playground",
 
     -- LSP
     "VonHeikemen/lsp-zero.nvim",
@@ -72,7 +61,6 @@ require("lazy").setup({
     },
 
     "onsails/lspkind-nvim",
-
 
     -- Telescope -- For moving quickly in a project
     "nvim-lua/popup.nvim",
