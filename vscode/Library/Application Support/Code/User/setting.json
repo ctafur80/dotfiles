@@ -1,0 +1,415 @@
+// Place your settings in this file to overwrite the default settings
+{
+  // General stuff
+  // --------------------------------------------------------------------------
+  "editor.fontFamily": "JetBrainsMonoNL Nerd Font",
+  "editor.fontSize": 13,
+  "editor.smoothScrolling": true,
+  "editor.minimap.enabled": false,
+  "workbench.sideBar.location": "right",
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.quickSuggestions": {
+    "comments": "on",
+    "strings": "on",
+    "other": "on"
+  },
+  "editor.autoIndent": "keep",
+  // "editor.tabSize": 4,
+  "editor.indentSize": 4,
+  "editor.lineNumbers": "off",
+  "workbench.startupEditor": "none",
+  "workbench.editor.showTabs": true,
+  "editor.wordWrap": "off",
+  "explorer.compactFolders": false,
+  "editor.bracketPairColorization.enabled": false,
+  // "editor.guides.indentation": false,
+
+  "terminal.integrated.fontSize": 13,
+  // Incompatible with Spanish keyboard layout; screws accents (`´`), `\`, etc.
+  // "terminal.integrated.macOptionIsMeta": true,
+
+  "editor.rulers": [{
+    "column": 92,
+    "color": "#133219",
+  }],
+
+  "cSpell.language": "es,en",
+  "cSpell.dictionaries": [ "es", "en" ],
+  "cSpell.enabled": false,
+
+  // TODO Tengo que hacer también la hoja de estilo vscode-markdown.css
+  // "markdown.styles": [
+  //   "file:///D:/vscode-markdown.css"
+  // ],
+
+  "telemetry.telemetryLevel": "off",
+  // "githubPullRequests.telemetry.enabled": false,
+
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook",
+  },
+
+  // "remote.containers.dockerPath": "podman",
+
+  // TODO Sería desesable tener unas task predeterminadas asociadas al tipo de
+  // archivo. En este issue lo piden: https://github.com/microsoft/vscode/issues/88106
+
+  "task.problemMatchers.neverPrompt": {
+    "shell": true
+  },
+  "extensions.ignoreRecommendations": true,
+
+
+
+  // Languages
+  // --------------------------------------------------------------------------
+
+  // C
+  "[c]": {
+  },
+
+
+  // Python
+  "python.languageServer": "Pylance",
+  "python.linting.pylintEnabled": true,
+  "python.linting.enabled": true,
+  "python.formatting.provider": "black",
+  "python.formatting.blackArgs": [
+    "--line-length 92",
+  ],
+  "[python]": {
+    // "editor.guides.indentation": false,
+    // "editor.defaultFormatter": "black",
+    "editor.defaultFormatter": "ms-python.python",
+  },
+
+
+  // Lua
+  "Lua.telemetry.enable": false,
+  "Lua.format.enable": true,
+  "Lua.semantic.enable": true,
+  "[lua]": {
+    // 
+  },
+
+
+  // HTML
+  "[html]": {
+    "editor.wordWrap": "off",
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+
+
+  // CSS
+  "css.format.enable": true,
+  "[css]": {
+    "editor.wordWrap": "off",
+    "editor.guides.indentation": false
+  },
+
+
+  "[makefile]": {
+    "editor.insertSpaces": false,
+    // "editor.tabSize": 2,
+    "editor.indentSize": 2,
+    "editor.rulers": [{
+      "column": 92,
+      "color": "#133219",
+    }],
+  },
+
+
+  // Markdown
+  // "markdownFileExtensions" = ["md", "mkd", "mdown", "markdown"]
+  "markdown.preview.fontSize": 14,
+  // "markdown.preview.fontFamily": "'Open Sans Light', -apple-system, sans-serif",
+  "markdown.styles": ["/Users/ctafur/Documents/diseno-tipografia/vscode/default.css"],
+  "markdown.suggest.paths.enabled": true,
+  "[markdown]": {
+    // "editor.autoIndent": "keep", // TODO Try with the different values
+    "editor.guides.indentation": false,
+    // "editor.tabSize": 2,
+    "editor.indentSize": 2,
+    "editor.rulers": [{
+      "column": 80,
+      "color": "#133219",
+    }],
+    // "editor.renderWhitespace": "none",
+    "editor.wordWrap": "off",
+    "editor.wordWrapColumn": 80,
+    "editor.autoClosingBrackets": "never",
+    "editor.occurrencesHighlight": false,
+    "editor.quickSuggestions": {
+      "comments": "on",
+      "other": "on",
+      "strings": "on",
+    },
+    "editor.tabCompletion": "on",
+    "editor.snippetSuggestions": "top",
+    // Maybe the default Markdown built-in extension,
+    // vscode.markdown-language-features, will have formatting features in a
+    // future
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // "editor.links": false,
+  },
+  // Quizás lo traiga en un futuro de forma predeterminada
+  // "markdown.experimental.validate.enabled": true,
+  // Markdown formatting settings. I use Prettier since there is no built-in
+  // Markdown formatter tool in VSCode. There is
+  // vscode.markdown-language-features but...
+  "prettier.arrowParens": "avoid",
+  // "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": false,
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": false,
+  "prettier.trailingComma": "all",
+  "prettier.proseWrap": "always",
+  "prettier.endOfLine": "lf",
+  "prettier.printWidth": 80,
+  "prettier.embeddedLanguageFormatting": "auto",
+  "prettier.semi": false,
+
+  // Mediawiki
+  "[mediawiki]": {
+    "editor.occurrencesHighlight": false,
+    // "editor.tabSize": 4,
+    "editor.indentSize": 4,
+    "editor.guides.indentation": false,
+    "editor.renderWhitespace": "none",
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 90,
+    // "editor.autoClosingBrackets": "never",
+  },
+
+
+  // reStructuredText
+  "[restructuredtext]": {
+    // "editor.tabSize": 4,
+    "editor.indentSize": 4,
+    "editor.wordWrapColumn": 90,
+    "editor.occurrencesHighlight": false,
+    "editor.guides.indentation": false,
+    "editor.renderWhitespace": "none",
+  },
+
+
+  // TeX and LaTeX
+  "texlab.latexFormatter": "latexindent",
+  "texlab.formatterLineLength": 80,
+  "texlab.build.executable": "tectonic",
+  "texlab.build.args": [
+    "-X",
+    "compile",
+    "%f",
+    "--synctex",
+    "--keep-logs",
+    "--keep-intermediates"
+  ],
+  "[latex]": {
+    "editor.guides.indentation": false,
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 80,
+    // "editor.defaultFormatter": "efoerster.texlab",
+  },
+
+
+  // JSON
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+
+
+  // YAML
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+
+  // Jupyter Notebook
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left",
+  },
+
+
+  // JavaScript
+  "[javascript]": {
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "vscode.typescript-language-features",
+  },
+
+
+  // TypeScript
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+
+
+  // Logs
+  "[log]": {
+    "editor.guides.indentation": false,
+  },
+
+
+
+  // Themes
+  // --------------------------------------------------------------------------
+  // "workbench.activityBar.visible": false,
+  "workbench.colorCustomizations": {
+    "[Default Light+]": {
+      "statusBar.background": "#ececec",
+      "statusBar.noFolderBackground": "#ececec",
+      "statusBar.debuggingBackground": "#edb5b5",
+      "statusBar.foreground": "#6f6f6f",
+      "editor.background": "#f9f9f9",
+      "editorLineNumber.foreground": "#9f9f9f",
+      "activityBar.background": "#ececec",
+      "activityBar.foreground": "#9f9f9f",
+    },
+    "[Default Dark+]": {
+      "editor.selectionBackground": "#2d4a33",
+      // "editor.selectionHighlightBackground": "#1b732b",
+      "sideBar.background": "#1d1e1d",
+      "sideBar.border": "#212821",
+      // "sideBar.background": "#212821",
+      // "sideBar.background": "#181d18",
+      "statusBar.background": "#1b251b",
+      "statusBar.foreground": "#71a87b",
+      "statusBar.noFolderBackground": "#1b251b",
+      "statusBar.debuggingBackground": "#210909",
+      "activityBar.background": "#1d1e1d",
+      // "activityBar.background": "#212821",
+      // "activityBar.background": "#181d18",
+      "activityBar.foreground": "#71a87b",
+      "activityBar.border": "#212821",
+      "tab.activeBackground": "#133219",
+      "tab.activeForeground": "#919191",
+      // "tab.activeBorder": "#133219",
+      // "tab.inactiveBackground": "#232222",
+      "tab.inactiveBackground": "#1d1e1d",
+      // "tab.inactiveForeground": "#919191",
+      "tab.inactiveForeground": "#71a87b",
+      "editorGroupHeader.tabsBackground": "#181918",
+      // "editor.foreground": "#B8B8B8",
+      "editor.lineHighlightBackground": "#222a22",
+      "titleBar.activeBackground": "#1d1e1d",
+      // "titleBar.activeForeground": "#919191",
+      "titleBar.activeForeground": "#71a87b",
+      "titleBar.inactiveBackground": "#1d1e1d",
+      "titleBar.inactiveForeground": "#919191",
+      "breadcrumb.background": "#1b251b",
+      "breadcrumb.foreground": "#578b61",
+      "terminal.background" : "#212821",
+      "terminal.tab.activeBorder": "#1b251b",
+      "panelTitle.activeBorder": "#1b732b",
+      // "panelTitle.activeBorder": "#1b732b",
+      "panelTitle.activeForeground": "#70c880",
+      // "panelTitle.activeBorder": "#ffc600",
+    }
+  },
+  
+  // About tokens
+  "editor.tokenColorCustomizations": {
+    "[Default Light+]": {
+      "comments": "#9f9f9f",
+      "textMateRules": [{
+        "scope": "comment",
+        "settings": {
+          // "fontStyle": "italic",
+        }
+      }]
+    },
+    "[Default Dark+]": {
+      "textMateRules": [{
+        "scope": "comment",
+        "settings": {
+          "foreground": "#9f9f9f",
+          // "fontStyle": "italic",
+        }
+      }, {
+        "scope": [
+          "comment.block.html"
+        ],
+        "settings": {
+          "foreground": "#838181",
+          // "fontStyle": "italic",
+        }
+      }, {
+        "scope": [
+          "text.html.markdown",
+          "punctuation.definition.quote.begin.markdown",
+          "punctuation.definition.list.begin.markdown",
+          "punctuation.definition.link.title.begin.markdown",
+          "punctuation.definition.link.title.end.markdown",
+          "meta.link.reference.def.markdown",
+          "constant.other.reference.link.markdown",
+          "punctuation.definition.constant.markdown",
+          "punctuation.definition.markdown",
+          "fenced_code.block.language",
+          "punctuation.definition.italic.markdown",
+        ],
+        "settings": {
+          // "foreground": "#b3bcd9",
+          "foreground": "#979eb8"
+        }
+      }, {
+        "scope": [
+          "markup.heading.markdown",
+          "markup.bold.markdown",
+          "markup.heading.setext.1.markdown",
+          "markup.heading.setext.2.markdown",
+        ],
+        "settings": {
+          // "foreground": "#d1d8f4",
+          // "foreground": "#b3bcd9",
+          "foreground": "#abb2c9",
+          "fontStyle": "bold"
+        }
+      }, {
+        "scope": [
+          "markup.heading.markdown markup.italic.markdown",
+          "markup.heading.markdown punctuation.definition.italic.markdown",
+          "markup.bold.markdown markup.italic.markdown",
+          "markup.bold.markdown punctuation.definition.italic.markdown",
+        ],
+        "settings": {
+          // "foreground": "#d1d8f4",
+          // "foreground": "#b3bcd9",
+          "foreground": "#abb2c9",
+          "fontStyle": "bold italic",
+        }
+      }, {
+        "scope": [
+          "punctuation.definition.constant.begin.markdown",
+          "punctuation.definition.constant.end.markdown",
+          "punctuation.definition.bold.markdown",
+          "string.other.link.title.markdown",
+          "punctuation.definition.link.title.begin.markdown",
+          "punctuation.definition.link.title.end.markdown",
+        ],
+        "settings": {
+          // "foreground": "#d1d8f4",
+          "foreground": "#abb2c9",
+        }
+      }, {
+        "scope": [
+          "markup.raw.block.markdown",
+          "markup.inline.raw.string.markdown",
+          "punctuation.definition.raw.markdown",
+          "markup.fenced_code.block.markdown",
+          "punctuation.definition.math.begin.markdown",
+          "punctuation.definition.math.end.markdown",
+        ],
+        "settings": {
+          // "foreground": "#9acfa6",
+          // "foreground": "#7ca385",
+          "foreground": "#799a81",
+        },
+      },
+      // TODO Para deshacerme del subrayado de las URLs, tengo que cambiar la gramática
+      ]
+    }
+  },
+
+
+}

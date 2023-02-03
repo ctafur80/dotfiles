@@ -24,7 +24,6 @@ require("lazy").setup({
     "folke/neodev.nvim",
 
     "tpope/vim-surround",
-    "tpope/vim-fugitive",
 
 
     "echasnovski/mini.nvim",

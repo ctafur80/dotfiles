@@ -25,7 +25,6 @@ require("setup/lspconfig")
 -- Language-specific settings
 require("lang-settings/c")
 require("lang-settings/pandoc")
-require("lang-settings/djot")
 require("lang-settings/css")
 require("lang-settings/html")
 require("lang-settings/javascript")
