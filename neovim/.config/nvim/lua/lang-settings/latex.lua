@@ -4,7 +4,6 @@ vim.api.nvim_create_autocmd("FileType", {
     callback = function()
         -- vim.opt.filetype = "tex"
         vim.opt.syntax = "tex"
-
         require("prose")
     end,
 })

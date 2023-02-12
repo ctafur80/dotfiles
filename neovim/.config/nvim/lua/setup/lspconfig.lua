@@ -34,6 +34,15 @@ require("lspconfig").lua_ls.setup{
         vim.keymap.set("n", "gT", vim.lsp.buf.type_definition, {buffer=0})
         vim.api.nvim_set_keymap("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", { noremap = true })
     end,
+
+    -- Other settings.
+    settings = {
+            Lua = {
+                diagnostics = {
+                    globals = { "vim" }
+                }
+            }
+        }
 }
 
 

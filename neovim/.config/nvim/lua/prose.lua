@@ -21,7 +21,6 @@ end
 vim.opt.spell = false
 
 
--- vim.cmd [[set formatoptions=tcqj2n]]
 vim.bo.formatoptions = "tcqj2n"
 
 vim.opt.textwidth = 80

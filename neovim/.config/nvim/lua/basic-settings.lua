@@ -24,11 +24,11 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = false
 
-vim.opt.scrolloff = 3
+vim.opt.scrolloff = 0
 
 vim.g.mapleader = ","
 
--- vim.opt.clipboard = "unnamedplus"
+vim.opt.clipboard = "unnamedplus"
 
 vim.opt.conceallevel = 0
 
@@ -44,10 +44,6 @@ vim.opt.path = vim.opt.path + "**"
 vim.opt.cursorline = true
 
 
--- The possible values are explained here:
--- <https://neovim.io/doc/user/change.html#fo-table>.
--- Para ver quién modifica la variable `formatoptions`, se debe usar
--- `:verbose set formatoptions`. A veces son los plugins incluidos en Neovim.
 vim.bo.formatoptions = string.gsub(vim.bo.formatoptions, "t", "")
 vim.bo.formatoptions = vim.bo.formatoptions .. "2n"
 
