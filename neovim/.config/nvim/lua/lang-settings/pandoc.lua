@@ -7,7 +7,7 @@ vim.api.nvim_create_autocmd({"BufNewFile", "BufFilePre", "BufRead"}, {
         vim.opt.syntax = "markdown.pandoc"
         require("prose")
 
-        -- vim.opt.foldcolumn = 2
+        vim.opt.formatoptions = "tcqj2n"
 
         vim.opt.conceallevel = 0
         vim.g["pandoc#syntax#conceal#use"] = 0
