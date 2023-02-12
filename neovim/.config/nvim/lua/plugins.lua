@@ -36,36 +36,37 @@ require("lazy").setup({
 
     "vim-pandoc/vim-pandoc-syntax",
 
-    --[[
-    { -- TODO Replace it with the mini.nvim one.
-        "numToStr/Comment.nvim",
-        config = function () require("Comment").setup() end
-    },
-    --]]
-
-
     "neovim/nvim-lspconfig",
     "hrsh7th/nvim-cmp",
+    "hrsh7th/cmp-nvim-lsp",
+    -- "L3MON4D3/LuaSnip",
 
 
     -- LSP
-    "VonHeikemen/lsp-zero.nvim",
-    requires = {
-        "neovim/nvim-lspconfig",
+    {
+        "VonHeikemen/lsp-zero.nvim",
+        branch = "v1.x",
+        dependencies = {
+            -- LSP Support
+            "neovim/nvim-lspconfig",             -- Required
+            -- "williamboman/mason.nvim",           -- Optional
+            -- "williamboman/mason-lspconfig.nvim", -- Optional
 
-        -- Autocompletion
-        {"hrsh7th/nvim-cmp"},
-        {"hrsh7th/cmp-buffer"},
-        {"hrsh7th/cmp-path"},
-        {"hrsh7th/cmp-nvim-lsp"},
-        {"hrsh7th/cmp-nvim-lua"},
-        {"saadparwaiz1/cmp_luasnip"},
+            -- Autocompletion
+            "hrsh7th/nvim-cmp",         -- Required
+            "hrsh7th/cmp-nvim-lsp",     -- Required
+            "hrsh7th/cmp-buffer",       -- Optional
+            "hrsh7th/cmp-path",         -- Optional
+            -- {"saadparwaiz1/cmp_luasnip"}, -- Optional
+            "hrsh7th/cmp-nvim-lua",     -- Optional
 
-        -- Snippets
-        {"L3M0N4D3/LuaSnip"},
-        -- Snippet collection (optional)
-        {"rafamadriz/friendly-snippets"},
+            -- Snippets
+            -- "L3MON4D3/LuaSnip",             -- Required
+            -- "rafamadriz/friendly-snippets", -- Optional
+        },
     },
+
+
 
     "onsails/lspkind-nvim",
 

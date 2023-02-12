@@ -65,7 +65,7 @@ vim.opt.smartcase = true
 
 
 -- When Neovim opens, it remembers the cursor last position.
-vim.api.nvim_create_autocmd('BufReadPost', {
+vim.api.nvim_create_autocmd("BufReadPost", {
     callback = function()
         local mark = vim.api.nvim_buf_get_mark(0, '"')
         local lcount = vim.api.nvim_buf_line_count(0)

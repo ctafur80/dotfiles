@@ -1,6 +1,5 @@
 
 
----[[
 
 local lspkind = require "lspkind"
 lspkind.init()
@@ -66,5 +65,4 @@ require('lspconfig')['sumneko_lua'].setup {
 },
 --]]
 
---]]
 
