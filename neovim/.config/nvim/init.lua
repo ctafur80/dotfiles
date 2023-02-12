@@ -5,6 +5,12 @@
 -- It is done in Lua language. You can learn to make your Neovim settings in Lua at
 -- <https://www.notonlycode.org/neovim-lua-config/>.
 
+
+nvim_conf_dir = os.getenv("HOME") .. "/.config/nvim"
+nvim_cache_dir = os.getenv("HOME") .. "/.config/cache/neovim"
+--TODO The Lua way doesn't work. vim.opt.undodir = vim.g.stdpath.config .. "/.config/cache/neovim"
+
+
 require("plugins")
 
 require("basic-settings")

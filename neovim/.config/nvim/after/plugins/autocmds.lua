@@ -1,7 +1,7 @@
 
 
 
-
+--[[
 local c_group = vim.api.nvim_create_autogroup("c", {clear = true})
 vim.api.nvim_create_autocmd("c_set_width", {
     command = "setlocal textwidth=92",
@@ -26,4 +26,5 @@ augroup END
 
 autocmd FileType c setlocal textwidth=92
 autocmd FileType c setlocal ai shiftwidth=2
+--]]
 

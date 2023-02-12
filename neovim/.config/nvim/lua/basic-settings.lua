@@ -1,39 +1,13 @@
 
 
 vim.opt.termguicolors = false
-pcall(vim.cmd, "colorscheme minicyan") -- rose-pine is also great
+-- rose-pine is also great but is only for termguicolors.
+pcall(vim.cmd, "colorscheme minicyan")
+
+
+vim.opt.textwidth = 92
 
 vim.opt.number = false
-
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
-
-vim.opt.smartindent = false
-
-vim.opt.scrolloff = 4
-
-vim.g.mapleader = " "
-
-vim.opt.clipboard = "unnamedplus"
-
-vim.opt.hidden = true
-
-
-vim.opt.conceallevel = 0
-
-
--- Netrw. Vim's default integrated file explorer. Maybe Telescope will make it obsolete.
-vim.g.netrw_banner = 1
-vim.g.netrw_liststyle = 3
-
-
-
--- TODO Quizás haya una forma de hacerlo podiendo el valor original en la primera cadena
-vim.opt.path = ".,/user/include,," .. "**"
--- vim.opt.path = vim.opt.path .. "**"
-
 
 -- Highlights sotf wrap so that I can unset numbering lines. Indents by 2 additional
 -- characters on wrapped lines; when line >= 40 characters puts the showbreak symbol at the
@@ -43,21 +17,46 @@ vim.opt.breakindentopt = "shift:2,min:40,sbr"
 vim.opt.showbreak = "⤷"
 
 
+-- Indentation
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.smartindent = false
+
+vim.opt.scrolloff = 3
+
+vim.g.mapleader = ","
+
+-- vim.opt.clipboard = "unnamedplus"
+
+vim.opt.conceallevel = 0
+
+
+-- Netrw. Vim's default integrated file explorer. Maybe Telescope will make it obsolete.
+vim.g.netrw_banner = 1
+vim.g.netrw_liststyle = 3
+
+vim.opt.path = vim.opt.path + "**"
+-- table.insert(vim.opt.path, "**")
+
 
 vim.opt.cursorline = true
-vim.opt.joinspaces = false
 
 
-vim.bo.formatoptions = vim.bo.formatoptions:gsub("c", "")
-vim.bo.formatoptions = vim.bo.formatoptions:gsub("r", "")
-vim.bo.formatoptions = vim.bo.formatoptions:gsub("o", "")
+-- The possible values are explained here:
+-- <https://neovim.io/doc/user/change.html#fo-table>.
+-- Para ver quién modifica la variable `formatoptions`, se debe usar
+-- `:verbose set formatoptions`. A veces son los plugins incluidos en Neovim.
+vim.bo.formatoptions = string.gsub(vim.bo.formatoptions, "t", "")
+vim.bo.formatoptions = vim.bo.formatoptions .. "2n"
+
 
 
 -- Backup and undo
 vim.opt.backup = false
 vim.opt.undofile = true
-vim.opt.undodir = os.getenv("HOME") .. "/.config/cache/neovim"
--- vim.opt.undodir = vim.g.stdpath.config .. "/.config/cache/neovim"
+vim.opt.undodir = nvim_cache_dir
 vim.opt.undolevels = 1000
 vim.opt.undoreload = 10000
 
@@ -66,11 +65,10 @@ vim.opt.undoreload = 10000
 -- Searching (more info at https://stackoverflow.com/a/2288438/7026520)
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-vim.opt.incsearch = true
 
 
 
--- When opening remembers the cursor last position
+-- When Neovim opens, it remembers the cursor last position.
 vim.api.nvim_create_autocmd('BufReadPost', {
     callback = function()
         local mark = vim.api.nvim_buf_get_mark(0, '"')

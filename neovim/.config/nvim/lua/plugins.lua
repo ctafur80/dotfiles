@@ -30,16 +30,23 @@ require("lazy").setup({
     -- "huyvohcmc/atlas.vim",
     -- {'rose-pine/neovim', as = 'rose-pine'},
 
-    "lewis6991/gitsigns.nvim",
+    -- "lewis6991/gitsigns.nvim",
 
     -- "lukas-reineke/indent-blankline.nvim",
 
     "vim-pandoc/vim-pandoc-syntax",
 
+    --[[
     { -- TODO Replace it with the mini.nvim one.
         "numToStr/Comment.nvim",
         config = function () require("Comment").setup() end
     },
+    --]]
+
+
+    "neovim/nvim-lspconfig",
+    "hrsh7th/nvim-cmp",
+
 
     -- LSP
     "VonHeikemen/lsp-zero.nvim",
