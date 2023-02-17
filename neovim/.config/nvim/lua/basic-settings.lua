@@ -9,7 +9,7 @@ vim.opt.textwidth = 92
 
 vim.opt.number = false
 
--- Highlights sotf wrap so that I can unset numbering lines. Indents by 2 additional
+-- Highlights sotf wrapping so that I can unset numbering lines. Indents by 2 additional
 -- characters on wrapped lines; when line >= 40 characters puts the showbreak symbol at the
 -- left.
 vim.opt.breakindent = true
