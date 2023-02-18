@@ -20,12 +20,15 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     {'echasnovski/mini.nvim', version = false},
 
+    "nvim-treesitter/nvim-treesitter",
     {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"},
-    "nvim-treesitter/playground",
 
     -- "folke/which-key.nvim",
     {"folke/neoconf.nvim", cmd = "Neoconf"},
     "folke/neodev.nvim",
+
+
+    "folke/tokyonight.nvim",
 
     -- "huyvohcmc/atlas.vim",
     -- {'rose-pine/neovim', as = 'rose-pine'},

@@ -4,6 +4,9 @@ vim.opt.termguicolors = false
 -- rose-pine is also great but is only for termguicolors.
 pcall(vim.cmd, "colorscheme minicyan")
 
+-- vim.opt.termguicolors = true
+-- pcall(vim.cmd, "colorscheme tokyonight-moon")
+
 
 vim.opt.textwidth = 92
 
@@ -61,6 +64,12 @@ vim.opt.undoreload = 10000
 -- Searching (more info at https://stackoverflow.com/a/2288438/7026520)
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+
+
+-- Tree-Sitter based folding
+vim.cmd [[ set foldmethod=expr ]]
+vim.cmd [[ set foldexpr=nvim_treesitter#foldexpr() ]]
+vim.cmd [[ set nofoldenable ]]
 
 
 

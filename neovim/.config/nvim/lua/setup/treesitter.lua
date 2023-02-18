@@ -1,7 +1,10 @@
 
 require'nvim-treesitter.configs'.setup {
-    ensure_installed = "all",
+    ensure_installed = { "c", "latex", "lua", "python", "json", "yaml", "vim", "rst",
+        "markdown", "javascript", "rust", "go", "sql", "bash" },
     sync_install = false,
+
+    auto_install = true,
 
     highlight = {
         enable = true,
@@ -10,9 +13,11 @@ require'nvim-treesitter.configs'.setup {
 
     indent = {
         enable = true,
-    }
+    },
 
-    -- folding = {}
+    folding = {
+        enable = true,
+    }
 
 }
 
