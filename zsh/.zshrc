@@ -45,7 +45,7 @@ stty -ixon
 # alias nerdctl="lima nerdctl"
 
 
-eval "$(pandoc --bash-completion)"
+# eval "$(pandoc --bash-completion)"
 
 eval "$(starship init zsh)"
 autoload -Uz compinit && compinit
