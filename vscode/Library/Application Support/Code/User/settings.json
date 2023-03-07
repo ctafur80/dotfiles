@@ -93,7 +93,8 @@
   // HTML
   "[html]": {
     "editor.wordWrap": "off",
-    "editor.defaultFormatter": "vscode.html-language-features"
+    "editor.defaultFormatter": "vscode.html-language-features",
+    "editor.linkedEditing": true
   },
 
 

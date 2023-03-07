@@ -17,6 +17,7 @@ export EDITOR="nvim"
 
 # export PATH="/nix/var/nix/profiles/default/bin:$PATH"
 export PATH="${HOME}/Documents/scripts:$PATH"
+export PATH="${HOME}/.local/bin:$PATH" # Pip packages
 
 
 bindkey -e # Emacs key bindings
