@@ -33,6 +33,11 @@ vim.g.mapleader = ","
 
 vim.opt.clipboard = "unnamedplus"
 
+
+-- :set wildignore=\*.git/\*
+-- vim.opt.wildignore = "*.git/*"
+
+
 vim.opt.conceallevel = 0
 
 
